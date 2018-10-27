@@ -1,0 +1,27 @@
+Show Origin: 
+	git remote show origin
+
+List all the files currently being tracked under the branch master
+	git ls-tree -r master --name-only
+	git ls-tree --full-tree -r HEAD
+	
+Show log to commit:
+	git log
+	
+revert the HEAD to commit that you deleted.
+Trở về thời điểm nào đó
+	git reset --hard <your deleted commit>
+ex. git reset --hard b4b2c02
+
+Có thể dùng lệnh revert này để lấy lại file nào đó:
+	git revert head
+	Git checkout 
+	
+But if you want to remove the file only from the Git repository and not remove it from the filesystem, use:
+
+	git rm --cached file1.txt
+git commit -m "remove file1.txt"
+	
+And to push changes to remote repo
+
+	git push origin branch_name  
