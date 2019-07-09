@@ -22,6 +22,25 @@ But if you want to remove the file only from the Git repository and not remove i
 	git rm --cached file1.txt
 git commit -m "remove file1.txt"
 	
+TH muon xoa folder tren origin
+	git rm -r --cached FolderName
+	git commit -m "Removed folder from repository"
+	git push origin master
 And to push changes to remote repo
 
 	git push origin branch_name  
+
+	
+$ git pull origin master
+From https://github.com/phuongnguyenht/wpscan
+ * branch            master     -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+
+Solution:
+$ git pull origin master --allow-unrelated-histories
+From https://github.com/phuongnguyenht/wpscan
+ * branch            master     -> FETCH_HEAD
+Merge made by the 'recursive' strategy.
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 README.md
